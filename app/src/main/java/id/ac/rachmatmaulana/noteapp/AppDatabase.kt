@@ -6,10 +6,8 @@ import android.provider.ContactsContract
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.belajarroom.db.note.Note
-import com.example.belajarroom.db.note.NoteDao
 
-@Database(entities = [ContactsContract.CommonDataKinds.Note::class], exportSchema = false, version = 1)
+@Database(entities = [Note::class], exportSchema = false, version = 1)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun noteDao(): NoteDao
